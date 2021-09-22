@@ -1,0 +1,16 @@
+body {
+    background-color: #1F2352;
+}
+
+header {
+    display: flex;
+}
+
+li {
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+ul {
+    margin-top: 25px;
+}
