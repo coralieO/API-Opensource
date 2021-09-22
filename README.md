@@ -14,7 +14,7 @@ Regarding the choice of our technologies we chose the Fetch API and Javascript w
 
 ### Installation 
 To install and retrieve our project, you need to clone the url: (  )
-[OpenWeather](git@github.com:coralieO/API-Opensource.git).
+[Guibli Movies List per Producer Open Source](git@github.com:coralieO/API-Opensource.git).
 
 
 ### Use
@@ -23,7 +23,7 @@ When you arrive on our site you will have a list of several producers. By clicki
 
 ## Credits
 
-“*” Jean Pierre HAN
+* Jean Pierre HAN
 “*” Coralie OUEDRAOGO
 “*” Dona DENKEY DANDJEIN
 “*” Eole GAUTHE
