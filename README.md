@@ -12,7 +12,7 @@ Regarding the choice of our technologies we chose the Fetch API and Javascript w
 
 ## Set up 
 
-###Installation 
+### Installation 
 To install and retrieve our project, you need to clone the url:
 
 git@github.com:coralieO/API-Opensource.git 
@@ -23,7 +23,7 @@ When you arrive on our site you will have a list of several producers. By clicki
 
 ## Credits
 
-. Jean Pierre HAN
-. Coralie
-. Dona DENKEY DANDJEIN
-. Eole GAUTHE
+“*” Jean Pierre HAN
+“*” Coralie OUEDRAOGO
+“*” Dona DENKEY DANDJEIN
+“*” Eole GAUTHE
