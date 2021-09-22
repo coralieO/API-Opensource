@@ -2,7 +2,7 @@
 
 # The Project 
 
-# Description 
+### Description 
 
 Our site allows to recover all the films made by a certain producer thanks to a filtering system. When you search for a producer in the search bar, you will have a list of all the films he has made.
 
