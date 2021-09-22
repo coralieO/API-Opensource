@@ -15,7 +15,7 @@ Regarding the choice of our technologies we chose the Fetch API and Javascript w
 ### Installation 
 To install and retrieve our project, you need to clone the url:
 
-git@github.com:coralieO/API-Opensource.git 
+(git@github.com:coralieO/API-Opensource.git)
 
 ### Use
 
