@@ -24,6 +24,6 @@ When you arrive on our site you will have a list of several producers. By clicki
 ## Credits
 
 * Jean Pierre HAN
-“*” Coralie OUEDRAOGO
-“*” Dona DENKEY DANDJEIN
-“*” Eole GAUTHE
+* Coralie OUEDRAOGO
+* Dona DENKEY DANDJEIN
+* Eole GAUTHE
