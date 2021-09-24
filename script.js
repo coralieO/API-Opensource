@@ -16,7 +16,7 @@ fetch(url_config)
     .then(function(data) {
         //console.log(data);
         base_url = data.images.base_url;
-        poster_size = data.images.poster_sizes[0];
+        poster_size = data.images.poster_sizes[2];
     })
 
 fetch(url_genres)
@@ -32,7 +32,7 @@ fetch(url_genres)
     });
 
 submit.onclick = () => {
-    moviesByGenres.innerHTML = "";
+    all_films.innerHTML = "";
     const url_mvoviesByGenres = "https://api.themoviedb.org/3/discover/movie?api_key="+API_key+"&with_genres="+genres.value+"";
     //console.log(url_mvoviesByGenres);
     fetch(url_mvoviesByGenres)
@@ -41,11 +41,12 @@ submit.onclick = () => {
             console.log(data.results);
             //console.log(typeof(data));
             for(let j = 0, moviesByGenresLength = data.results.length; j < moviesByGenresLength; j++) {
-
-                html_2 = '<p id="'+data.results[j].id+'">'+data.results[j].title+'</p>';
-                html_2 += '<p>'+data.results[j].release_date+'</p>';
-                html_2 += '<img src="'+base_url+poster_size+'/'+data.results[j].poster_path+'">';
-                moviesByGenres.innerHTML += html_2;
+                html_2 = '<div class="card_film">';
+                html_2 += '<div class="card"> <img src="'+base_url+poster_size+'/'+data.results[j].poster_path+'"> </div>';
+                html_2 += '<p id="'+data.results[j].id+'" class="card_title">'+data.results[j].title+'</p>';
+                html_2 += '<p class="card_date">'+data.results[j].release_date+'</p>';
+                html_2 += '</div>';
+                all_films.innerHTML += html_2;
             }
         })
 }

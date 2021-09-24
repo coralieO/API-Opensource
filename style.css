@@ -126,11 +126,7 @@ ul {
     margin-top: 15px;
 }
 
-.producers{
-    margin-top: 4px;
-}
-
-.all_films{
+#all_films{
     width: calc(100% - 300px);
     display: flex;
     flex-flow: wrap;
@@ -164,10 +160,11 @@ ul {
     height: 300px;
     width: 200px;
     border-radius: 25px;
-    background-color: #5066AF;
+    /*background-color: #5066AF;*/
 }
 
 .card_title, .card_date{
+    width: 200px;
     text-align: center;
     margin-top: 15px;
 }
@@ -194,7 +191,7 @@ ul {
         margin-right: auto;
     }
 
-    .all_films{
+    #all_films{
         width: 100%;
         justify-content: space-around;
     }
