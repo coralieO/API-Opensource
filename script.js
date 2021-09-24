@@ -1,8 +1,23 @@
 const API_key = "75056b99a5ba4bfa18ac24ffdc0ad9f5";
 const url_genres = "https://api.themoviedb.org/3/genre/movie/list?api_key="+API_key+"&language=en-US";
+const url_config = "https://api.themoviedb.org/3/configuration?api_key="+API_key+"";
 let html = "",
     html_2 ="",
-    html_images = "";
+    html_images = "",
+    movies = {
+        "id" : {},
+        "title" : {},
+        "release_date" : {},
+        "poster_path" : {}
+    };
+
+fetch(url_config)
+    .then(resp => resp.json())
+    .then(function(data) {
+        //console.log(data);
+        base_url = data.images.base_url;
+        poster_size = data.images.poster_sizes[0];
+    })
 
 fetch(url_genres)
     .then(resp => resp.json())
@@ -16,26 +31,36 @@ fetch(url_genres)
         }
     });
 
-submit.onclick = (e) => {
+submit.onclick = () => {
     moviesByGenres.innerHTML = "";
-    e.preventDefault;
     const url_mvoviesByGenres = "https://api.themoviedb.org/3/discover/movie?api_key="+API_key+"&with_genres="+genres.value+"";
     //console.log(url_mvoviesByGenres);
     fetch(url_mvoviesByGenres)
         .then(response => response.json())
         .then(function(data){
-            //console.log(data);
+            console.log(data.results);
             //console.log(typeof(data));
             for(let j = 0, moviesByGenresLength = data.results.length; j < moviesByGenresLength; j++) {
-                movies_id = data.results[j].id;
-                html_2 = '<p id="'+movies_id+'">'+data.results[j].title+'</p>';
+
+                html_2 = '<p id="'+data.results[j].id+'">'+data.results[j].title+'</p>';
                 html_2 += '<p>'+data.results[j].release_date+'</p>';
+                html_2 += '<img src="'+base_url+poster_size+'/'+data.results[j].poster_path+'">';
                 moviesByGenres.innerHTML += html_2;
             }
         })
 }
 
+
 /*
+            for(let g = 0, moviesIdLength = Object.keys(movies.id).length; g < moviesIdLength; g++) {
+                url_imagesByMovies += "https://api.themoviedb.org/3/movie/"+movies.id[g]+"/images?api_key="+API_key+"&language=en-US";
+                fetch(url_imagesByMovies)
+                    .then(response => response.json())
+                    .then(function(data) {
+                        console.log(data);
+                    })
+            }
+
     let url_imagesByMovies = "";
     url_imagesByMovies += "https://api.themoviedb.org/3/movie/"+data.results[j].id+"/images?api_key="+API_key+"&language=en-US";
     fetch(url_imagesByMovies)
