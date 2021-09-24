@@ -1,7 +1,8 @@
 const API_key = "75056b99a5ba4bfa18ac24ffdc0ad9f5";
 const url_genres = "https://api.themoviedb.org/3/genre/movie/list?api_key="+API_key+"&language=en-US";
 let html = "",
-    html_2 ="";
+    html_2 ="",
+    html_images = "";
 
 fetch(url_genres)
     .then(resp => resp.json())
@@ -16,22 +17,35 @@ fetch(url_genres)
     });
 
 submit.onclick = (e) => {
+    moviesByGenres.innerHTML = "";
     e.preventDefault;
     const url_mvoviesByGenres = "https://api.themoviedb.org/3/discover/movie?api_key="+API_key+"&with_genres="+genres.value+"";
-    console.log(url_mvoviesByGenres);
+    //console.log(url_mvoviesByGenres);
     fetch(url_mvoviesByGenres)
         .then(response => response.json())
         .then(function(data){
-            console.log(data);
-            console.log(typeof(data));
+            //console.log(data);
+            //console.log(typeof(data));
             for(let j = 0, moviesByGenresLength = data.results.length; j < moviesByGenresLength; j++) {
-                html_2 = '<p>'+data.results[j].title+'</p>';
+                movies_id = data.results[j].id;
+                html_2 = '<p id="'+movies_id+'">'+data.results[j].title+'</p>';
+                html_2 += '<p>'+data.results[j].release_date+'</p>';
                 moviesByGenres.innerHTML += html_2;
             }
         })
 }
 
-
+/*
+    let url_imagesByMovies = "";
+    url_imagesByMovies += "https://api.themoviedb.org/3/movie/"+data.results[j].id+"/images?api_key="+API_key+"&language=en-US";
+    fetch(url_imagesByMovies)
+        .then(resp => resp.json())
+        .then(function(data2) {
+            console.log(data2);
+            html_images = "<img src=>";
+            imagesByMovies.innerHTML += html_images;
+        })
+*/
 /*
 const url = 'https://ghibliapi.herokuapp.com/films/';
 let html ="";
