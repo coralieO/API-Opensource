@@ -25,7 +25,7 @@ submit.onclick = (e) => {
             console.log(data);
             console.log(typeof(data));
             for(let j = 0, moviesByGenresLength = data.results.length; j < moviesByGenresLength; j++) {
-                html_2 = '<p>'+data.results[j].title+'<p>';
+                html_2 = '<p>'+data.results[j].title+'</p>';
                 moviesByGenres.innerHTML += html_2;
             }
         })
