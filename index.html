@@ -4,21 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Movie database API </title>
 </head>
 <body>
-    <form action=""> 
-        <label for="genres"> Choose a genre : </label>
-        <select name="genres" id="genres">
 
-        </select>
-        <br>
-    </form>
-    <button id="submit"> Submit </button>
+    <header>
+        <nav>
+            <h1><a href="index.html">Movie Database API</a></h1>
+            <ul>
+                <li><a href="#">Tous les films</a></li>
+                <li>Films les mieux notés</li>
+                <li>Films les plus vus</li>
+                <li>
+                    <input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Rechercher...">
+                </li>
+            </ul>
+        </nav>
 
-    <div id="moviesByGenres">
-        
-    </div>
-    <script src="script.js"></script>
+        <section id="the_film">
+                <h3 id="new_film">Nouveauté</h3>
+                <div class="text_to_bottom">
+                    <h2>Titre</h2>
+                    <h3>Producteur</h3>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione cum, aut magnam quisquam, eum veniam voluptate corrupti ipsam aspernatur odio voluptatem esse inventore facilis laboriosam repellat placeat nesciunt dignissimos!</p>
+                    <a href="" class="more_info">En savoir plus >> </a>
+                </div>
+        </section>
+    </header>
+
+        <section id="filter_and_films">
+            <div class="all_producers">
+                <h3>Les auteurs</h3>
+                <div id="border"></div>
+                <div class="producers_list">
+                    <form action=""> 
+                        <label for="genres"> Choose a genre : </label>
+                        <select name="genres" id="genres">
+                
+                        </select>
+                        <br>
+                    </form>
+                    <button id="submit"> Submit </button>
+                </div>
+            </div>
+
+            <div id="moviesByGenres">
+                <div class="card_film">
+                    <div class="card"></div>
+                    <p class="card_title">Titre1</p>
+                    <p class="card_date">Date</p>
+                </div>
+
+                <div class="card_film">
+                    <div class="card"></div>
+                    <p class="card_title">Titre2</p>
+                    <p class="card_date">Date</p>
+                </div>
+                
+                <div class="card_film">
+                    <div class="card"></div>
+                    <p class="card_title">Titre3</p>
+                    <p class="card_date">Date</p>
+                </div>
+                
+                <div class="card_film">
+                    <div class="card"></div>
+                    <p class="card_title">Titre4</p>
+                    <p class="card_date">Date</p>
+                </div>
+                
+                <div class="card_film">
+                    <div class="card"></div>
+                    <p class="card_title">Titre5</p>
+                    <p class="card_date">Date</p>
+                </div>
+                
+                <div class="card_film">
+                    <div class="card"></div>
+                    <p class="card_title">Titre6</p>
+                    <p class="card_date">Date</p>
+                </div>
+                
+                <div class="card_film">
+                    <div class="card"></div>
+                    <p class="card_title">Titre7</p>
+                    <p class="card_date">Date</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
 </body>
 </html>
