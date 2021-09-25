@@ -91,6 +91,10 @@ ul {
 
 }
 
+.space_title{
+    margin-bottom: 5px;
+}
+
 .text_to_bottom{
     /* display: flex;
     flex-direction: column;
@@ -161,6 +165,13 @@ ul {
     width: 200px;
     border-radius: 25px;
     /*background-color: #5066AF;*/
+}
+
+.img_card{
+    display: flex;
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card_title, .card_date{

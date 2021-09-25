@@ -42,7 +42,7 @@ submit.onclick = () => {
             //console.log(typeof(data));
             for(let j = 0, moviesByGenresLength = data.results.length; j < moviesByGenresLength; j++) {
                 html_2 = '<div class="card_film">';
-                html_2 += '<div class="card"> <img src="'+base_url+poster_size+'/'+data.results[j].poster_path+'"> </div>';
+                html_2 += '<div class="card"> <img class="img_card" src="'+base_url+poster_size+'/'+data.results[j].poster_path+'"> </div>';
                 html_2 += '<p id="'+data.results[j].id+'" class="card_title">'+data.results[j].title+'</p>';
                 html_2 += '<p class="card_date">'+data.results[j].release_date+'</p>';
                 html_2 += '</div>';
